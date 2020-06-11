@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css'
+import Nav from 'react-bootstrap/Nav';
 
 export default class MenuBar extends Component {
     render() {
@@ -21,6 +22,19 @@ export default class MenuBar extends Component {
         }
         return (
             <div id='menuBar'>
+                <Nav variant="pills" defaultActiveKey="/home">
+                    <Nav.Item>
+                        <Nav.Link active href="/home">Active</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="link-1">Option 2</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="disabled" disabled>
+                            Disabled
+                         </Nav.Link>
+                    </Nav.Item>
+                </Nav>
                 <ul style={menuListStyle} className='menuList'>
                     <li style={menuListItemStyle} className='menuListItem'>
                         <a style={menuListLinkStyle} className='menuListLink' href='test'>Home</a>

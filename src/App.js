@@ -6,7 +6,7 @@ import FooterLinks from './Components/footerLinks';
 import QuoteSection from './Components/quoteSection';
 import Popout from './Components/popout';
 import './App.css';
-
+import Button from 'react-bootstrap/Button';
 
 class App extends Component {
   state = {
@@ -18,6 +18,7 @@ class App extends Component {
       popupOpen: !this.state.popupOpen
     })
   };
+
   render() {
     const headerStyle = {
       background: '#dddddd',
@@ -49,9 +50,8 @@ class App extends Component {
           <MenuBar />
         </div>
         <body style={containerStyle} id='container'>
-        {this.state.popupOpen ? <Popout toggle={this.togglePop} /> : null}
-        <button onClick={this.togglePop}>TEST</button>
-
+          {this.state.popupOpen ? <Popout toggle={this.togglePop} /> : null}
+            <Button onClick={this.togglePop}>test</Button>
           <SpeakerList />
           <QuoteSection />
         </body>
