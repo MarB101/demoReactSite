@@ -3,12 +3,6 @@
   padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .header {
   background-color: #282c34;
   font-size: calc(10px + 2vmin);
@@ -42,3 +36,25 @@
 .link {
   color: #a2c0c9;
 }
+
+.is-active {
+  color: #a2c0c9;
+}
+/* 
+.menuList {
+  background: #111;
+  list-style-type: none;
+  padding: 10px
+}
+
+.menuListItem {
+  float: left;
+}
+
+.menuListLink {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none
+} */
