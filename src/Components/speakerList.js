@@ -3,17 +3,25 @@ import Card from './card';
 import { CardDeck } from 'react-bootstrap';
 
 export default class SpeakerList extends Component {
+    state = {
+        popupOpen: false,
+    };
+    togglePop = () => {
+        this.setState({
+            popupOpen: !this.state.popupOpen
+        })
+    };
     render() {
         const speakerListStyle = {
-            display: 'block',
-            textAlign: 'center'
+            listStyleType: 'none',
+            margin: 'auto'
         }
         const cardDeckStyle = {
-            margin: '20px',
-            borderWidth: '0px'
+            margin: '30px 200px 30px 200px'
         }
         const titleStyle = {
-            textAlign: 'Center'
+            textAlign: 'Center',
+            textTransform: 'uppercase'
         }
 
         return (
@@ -22,19 +30,19 @@ export default class SpeakerList extends Component {
                 <ul style={speakerListStyle} className='speakerList'>
                     <li style={cardDeckStyle} className='cardDeckHolder'>
                         <CardDeck>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
                         </CardDeck>
                     </li>
                     <li style={cardDeckStyle} className='cardDeckHolder'>
-                    <CardDeck>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </CardDeck>
+                        <CardDeck>
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                        </CardDeck>
                     </li>
                 </ul>
             </div>

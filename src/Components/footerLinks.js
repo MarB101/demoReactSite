@@ -8,7 +8,6 @@ export default class FooterLinks extends Component {
             paddingBottom: '50px'
         }
         const footerListColStyle = {
-            display: 'block',
             float: 'left',
             width: '50px',
             paddingLeft: '100px',

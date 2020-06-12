@@ -4,36 +4,28 @@ import MenuBar from './Components/menuBar';
 import SpeakerList from './Components/speakerList';
 import FooterLinks from './Components/footerLinks';
 import QuoteSection from './Components/quoteSection';
-import Popout from './Components/popout';
 import './App.css';
-import Button from 'react-bootstrap/Button';
 
 class App extends Component {
-  state = {
-    popupOpen: false
-  };
-
-  togglePop = () => {
-    this.setState({
-      popupOpen: !this.state.popupOpen
-    })
-  };
-
   render() {
-    const headerStyle = {
-      background: '#dddddd',
-      fontSize: 'calc(10px + 2vmin)',
-      color: 'white'
+    const pageStyles = {
+      fontFamily: 'Arial'
     }
     const footerStyle = {
-      background: '#575757',
-      listStyleType: 'none',
+      background: '#575757'
     }
     const headerTextStyle = {
-      padding: '10px'
+      padding: '0px 0px 20px 30px',
+      marginTop: '100px',
+      color: '#5496ff',
+      fontWeight: 'bold',
+      fontSize: '75px'
     }
     const logoStyle = {
-      padding: '30px'
+      margin: '40px 0px 0px 40px',
+      width: '170px',
+      display: 'block',
+      backgroundColor: 'red'
     }
     const containerStyle = {
       padding: '30px',
@@ -42,19 +34,17 @@ class App extends Component {
     }
 
     return (
-      <div id="streamGoDemoPage">
-        <div style={headerStyle} id="header">
+      <div style={pageStyles} id="streamGoDemoPage">
+        <div id="header">
           <div style={logoStyle} className='logo'>Logo</div>
           <AccountComponent />
-          <h1 style={headerTextStyle} className='headerText'>This Conference 2020</h1>
+          <h1 style={headerTextStyle} className='headerText'>This Conference <span style={{color: '#356fcc'}}>2020</span></h1>
           <MenuBar />
         </div>
         <body style={containerStyle} id='container'>
-          {this.state.popupOpen ? <Popout toggle={this.togglePop} /> : null}
-            <Button onClick={this.togglePop}>test</Button>
           <SpeakerList />
-          <QuoteSection />
         </body>
+          <QuoteSection />
         <div style={footerStyle} id='footer'>
           <FooterLinks />
         </div>

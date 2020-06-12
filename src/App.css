@@ -17,12 +17,6 @@
   text-align: center;
 }
 
-.footer {
-  background-color: #3d3d3d;
-  font-size: calc(10px + 2vmin);
-  color: rgb(235, 23, 23);
-}
-
 .menuList {
   display: inline;
 }
@@ -58,3 +52,9 @@
   padding: 14px 16px;
   text-decoration: none
 } */
+
+@media screen and (max-width: 700px) {
+  #header {
+    color: #ff0000;
+  }
+}

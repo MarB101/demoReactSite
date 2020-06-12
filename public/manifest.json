@@ -18,6 +18,13 @@
       "sizes": "512x512"
     }
   ],
+  "cardImages": [
+    {
+      "src": "./images/",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

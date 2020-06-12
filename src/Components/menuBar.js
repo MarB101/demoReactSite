@@ -4,57 +4,44 @@ import Nav from 'react-bootstrap/Nav';
 
 export default class MenuBar extends Component {
     render() {
-        const menuListStyle = {
-            listStyleType: 'none',
-            padding: '10px'
-        }
-        const menuListItemStyle = {
-            float: 'left',
-            padding: '20px',
-            background: 'black'
-        }
         const menuListLinkStyle = {
-            display: 'block',
             color: 'white',
             textAlign: 'center',
-            padding: '14px 16px',
-            textDecoration: 'none'
+            textTransform: 'uppercase',
+            fontWeight: 'bold',
+            padding: '10px 30px 10px 30px'
         }
+
+        const menuButtonStyleOdd = {
+            backgroundColor: 'lightblue'
+        }
+
+        const menuButtonStyleEven = {
+            backgroundColor: 'blue'
+        }
+
         return (
             <div id='menuBar'>
-                <Nav variant="pills" defaultActiveKey="/home">
-                    <Nav.Item>
-                        <Nav.Link active href="/home">Active</Nav.Link>
+                <Nav style={{background: 'grey'}}variant="pills">
+                    <Nav.Item style={menuButtonStyleOdd}>
+                        <Nav.Link style={menuListLinkStyle} href="/home">Home</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item style={menuButtonStyleEven}>
+                        <Nav.Link style={menuListLinkStyle} active eventKey="link-1">Speakers</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item style={menuButtonStyleOdd}>
+                        <Nav.Link style={menuListLinkStyle} eventKey="link-2">Agenda</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item style={menuButtonStyleEven}>
+                        <Nav.Link style={menuListLinkStyle} eventKey="link-3">Why Attend</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item style={menuButtonStyleOdd}>
+                        <Nav.Link style={menuListLinkStyle} eventKey="link-4">Contact Us</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-1">Option 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="disabled" disabled>
-                            Disabled
-                         </Nav.Link>
+                        <Nav.Link style={menuListLinkStyle} eventKey="link-5">Entrance</Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <ul style={menuListStyle} className='menuList'>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink' href='test'>Home</a>
-                    </li>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink is-active' href='test'>Speakers</a>
-                    </li>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink' href='test'>Agenda</a>
-                    </li>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink' href='test'>Why Attend</a>
-                    </li>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink' href='test'>Contact Us</a>
-                    </li>
-                    <li style={menuListItemStyle} className='menuListItem'>
-                        <a style={menuListLinkStyle} className='menuListLink' href='test'>Entrance</a>
-                    </li>
-                </ul>
             </div>
         )
     }
