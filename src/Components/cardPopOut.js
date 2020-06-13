@@ -10,8 +10,8 @@ function Example() {
   
     return (
       <>
-        <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+        <Button style={{display: 'block',margin:'auto'}}variant="primary" onClick={handleShow}>
+          More Info
         </Button>
   
         <Modal show={show} onHide={handleClose} centered>

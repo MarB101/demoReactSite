@@ -4,7 +4,8 @@ export default class FooterLinks extends Component {
     render() {
         const footerSectionStyle = {
             background: '#575757',
-            border: '1px solid #575757'
+            border: '1px solid #575757',
+            textAlign: 'center'
         }
         const footerListStyle = {
             display: 'inline-block',
