@@ -14,7 +14,8 @@ export default class AttendCard extends Component {
 
         const imageStyle = {
             objectFit: 'cover', 
-            height: '300px'
+            height: '300px',
+            borderRadius: '0px'
         }
 
         return (

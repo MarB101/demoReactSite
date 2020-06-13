@@ -7,7 +7,8 @@ export default class AccountComponent extends Component{
 
         const accountSectionStyle = {
             float: 'right',
-            margin: '10px'
+            marginTop: '100px',
+            marginRight: '20px'
         }
 
         const LoginBtnStyle = {

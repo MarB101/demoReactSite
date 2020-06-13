@@ -13,20 +13,18 @@ class App extends Component {
     }
     const headerTextStyle = {
       padding: '0px 0px 20px 30px',
-      marginTop: '100px',
       color: '#5496ff',
       fontWeight: 'bold',
       fontSize: '75px'
     }
     const logoStyle = {
-      margin: '40px 0px 0px 40px',
-      width: '170px',
-      display: 'block',
-      backgroundColor: 'red'
+      padding: '30px 0px 0px 30px',
+      width: '130px',
+      height: '130px',
     }
     const containerStyle = {
       padding: '30px',
-      backgroundImage: 'url(https://static.wixstatic.com/media/fda52a6a7f4140259e12beb9796f91dc.jpg/v1/fill/w_4608,h_1963,al_c,q_90/Faded%20Conference%20Table.jpg)',
+      backgroundImage: `url(${process.env.PUBLIC_URL + '/images/background.jpg'})`,
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'
@@ -47,7 +45,7 @@ class App extends Component {
     return (
       <div style={pageStyles} id="streamGoDemoPage">
         <div id="header">
-          <div style={logoStyle} className='logo'>Logo</div>
+          <img style={logoStyle} className='logo' src={process.env.PUBLIC_URL + '/images/logo.jpg'} alt='logo'></img>
           <AccountComponent />
           <h1 style={headerTextStyle} className='headerText'>This Conference <span style={{color: '#356fcc'}}>2020</span></h1>
           <MenuBar />
