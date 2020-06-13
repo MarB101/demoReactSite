@@ -21,7 +21,7 @@
   "cardImages": [
     {
       "src": "./images/",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],

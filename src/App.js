@@ -11,9 +11,6 @@ class App extends Component {
     const pageStyles = {
       fontFamily: 'Arial'
     }
-    const footerStyle = {
-      background: '#575757'
-    }
     const headerTextStyle = {
       padding: '0px 0px 20px 30px',
       marginTop: '100px',
@@ -29,8 +26,22 @@ class App extends Component {
     }
     const containerStyle = {
       padding: '30px',
-      marginTop: '30px',
-      clear: 'both'
+      backgroundImage: 'url(https://static.wixstatic.com/media/fda52a6a7f4140259e12beb9796f91dc.jpg/v1/fill/w_4608,h_1963,al_c,q_90/Faded%20Conference%20Table.jpg)',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }
+
+    const copyrightStyle = {
+      backgroundColor: '#404142',
+      overflow: 'hidden'
+    }
+
+    const copyrightTextStyle = {
+      color: 'white',
+      float: 'right',
+      margin: '0px',
+      padding: '10px'
     }
 
     return (
@@ -45,8 +56,11 @@ class App extends Component {
           <SpeakerList />
         </body>
           <QuoteSection />
-        <div style={footerStyle} id='footer'>
+        <div id='footer'>
           <FooterLinks />
+        </div>
+        <div style={copyrightStyle} id='copyright'>
+          <h3 style={copyrightTextStyle}>Copyright</h3>
         </div>
       </div>
     );

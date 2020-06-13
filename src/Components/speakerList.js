@@ -14,14 +14,15 @@ export default class SpeakerList extends Component {
     render() {
         const speakerListStyle = {
             listStyleType: 'none',
-            margin: 'auto'
+            padding: '0px'
         }
         const cardDeckStyle = {
-            margin: '30px 200px 30px 200px'
+            margin: '30px 250px 30px 250px'
         }
         const titleStyle = {
             textAlign: 'Center',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            color: '#356fcc'
         }
 
         return (
