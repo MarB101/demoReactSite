@@ -1,6 +1,6 @@
 {
-  "short_name": "SGDemo",
-  "name": "Stream Go Demo",
+  "short_name": "Demo",
+  "name": "Demo",
   "icons": [
     {
       "src": "favicon.ico",
