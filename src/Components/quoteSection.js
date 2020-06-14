@@ -5,7 +5,7 @@ export default class QuoteSection extends Component {
     render() {
         const quoteSectionStyle = {
             textAlign: 'center',
-            padding: '30px 500px 30px 500px',
+            padding: '30px 400px 30px 400px',
             background: 'linear-gradient(90deg, rgba(33,100,161,1) 0%, rgba(33,100,161,1) 50%, rgba(74,145,214,1) 100%)'
         }
         const carouselItemStyle = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from 'react-bootstrap/Card'
-import Example from './cardPopOut';
+import PopOut from './cardPopOut';
 
 export default class AttendCard extends Component {
     render() {
@@ -28,7 +28,7 @@ export default class AttendCard extends Component {
                             Job Title, Department
                             Name, Company Name
                         </Card.Text>
-                        <Example/>
+                        <PopOut/>
                     </Card.Body>
                 </Card>
             </div>

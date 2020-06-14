@@ -4,7 +4,8 @@ import MenuBar from './Components/menuBar';
 import SpeakerList from './Components/speakerList';
 import FooterLinks from './Components/footerLinks';
 import QuoteSection from './Components/quoteSection';
-import './App.css';
+import Button from 'react-bootstrap/Button';
+import { ChevronDown } from 'react-bootstrap-icons';
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
       height: '130px',
     }
     const containerStyle = {
-      padding: '30px',
+      padding: '60px',
       backgroundImage: `url(${process.env.PUBLIC_URL + '/images/background.jpg'})`,
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -42,6 +43,23 @@ class App extends Component {
       padding: '10px'
     }
 
+    const registerButtonStyle = {
+      backgroundColor: 'orange',
+      border: '0px',
+      borderRadius: '0px',
+      display: 'block',
+      margin: 'auto',
+      textTransform: 'uppercase',
+      padding: '10px 30px 10px 30px',
+      fontWeight: 'bold'
+    }
+
+    const chevronStyle = {
+      display: 'block',
+      margin: 'auto',
+      marginBottom: '30px'
+    }
+
     return (
       <div style={pageStyles} id="streamGoDemoPage">
         <div id="header">
@@ -52,6 +70,8 @@ class App extends Component {
         </div>
         <body style={containerStyle} id='container'>
           <SpeakerList />
+          <ChevronDown style={chevronStyle}/>
+          <Button style={registerButtonStyle}>Register Now</Button>
         </body>
           <QuoteSection />
         <div id='footer'>

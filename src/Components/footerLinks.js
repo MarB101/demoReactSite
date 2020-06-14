@@ -5,60 +5,83 @@ export default class FooterLinks extends Component {
         const footerSectionStyle = {
             background: '#575757',
             border: '1px solid #575757',
-            textAlign: 'center'
+            padding: '10px 30px 10px 30px',
+            overflow: 'hidden'
         }
         const footerListStyle = {
-            display: 'inline-block',
-            margin: 'auto',
-            padding: '30px',
-            width: '300px'
+            padding: '10px 30px 10px 30px',
+            width: '600px',
+            float: 'left',
+            color: 'white'
         }
         const footerListColStyle = {
             display: 'block',
-            paddingRight: '100px',
-            border: '3px solid green',
-            margin: 'auto'
+            margin: 'auto',
+            textAlign: 'left'
+        }
+        const headerStyle = {
+            textAlign: 'left',
+            margin: '20px',
+            textTransform: 'uppercase',
+            fontWeight: 'bold',
+            color: 'white'
         }
         const footerListLinkStyle = {
             display: 'block',
-            border: '3px solid green'
+            textAlign: 'left',
+            margin: 'auto',
+            color: 'white'
+        }
+        const hrStyle = {
+            borderColor: 'white'
         }
         return (
             <div style={footerSectionStyle} id='footerSection'>
                 <ul style={footerListStyle} className='footerList'>
+                    <span style={headerStyle}> Other Company Sites </span>
+                    <hr style={hrStyle} />
                     <li style={footerListColStyle} className='listCol'>
-                        <span> Header </span>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
+                        <a style={footerListLinkStyle} className='link' href='test'>Corporate</a>
+                    </li>
+                    <li style={footerListColStyle} className='listCol'>
+                        <a style={footerListLinkStyle} className='link' href='test'>Marketing</a>
                     </li>
                 </ul>
                 <ul style={footerListStyle} className='footerList'>
+                    <span style={headerStyle}> Legal </span>
+                    <hr style={hrStyle} />
+
                     <li style={footerListColStyle} className='listCol'>
-                        <span> Header </span>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
+                        <a style={footerListLinkStyle} className='link' href='test'>Terms & Conditions</a>
+                    </li>
+                    <li style={footerListColStyle} className='listCol'>
+                        <a style={footerListLinkStyle} className='link' href='test'>Terms & Conditions of use</a>
+                    </li>
+                    <li style={footerListColStyle} className='listCol'>
+                        <a style={footerListLinkStyle} className='link' href='test'>Privacy Policy</a>
+                    </li>
+                    <li style={footerListColStyle} className='listCol'>
+                        <a style={footerListLinkStyle} className='link' href='test'>Cookies Policy</a>
+                    </li>
+                    <li style={footerListColStyle} className='listCol'>
+                        <a style={footerListLinkStyle} className='link' href='test'>Accessibility</a>
                     </li>
                 </ul>
                 <ul style={footerListStyle} className='footerList'>
-                    <li style={footerListColStyle} className='listCol'>
-                        <span> Header </span>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                        <a style={footerListLinkStyle} className='link' href='test'>Card</a>
-                    </li>
+                    <span style={headerStyle}> Social </span>
+                    <hr style={hrStyle} />
+
                 </ul>
-            </div>
+                <ul style={footerListStyle} className='footerList'>
+                    <span style={headerStyle}> Find Us </span>
+                    <hr style={hrStyle} />
+
+                    <p>Company</p>
+                    <p>Building</p>
+                    <p>Street</p>
+                    <p>County/Postcode</p>
+                </ul>
+            </div >
         );
     }
 }

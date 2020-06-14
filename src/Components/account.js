@@ -18,7 +18,8 @@ export default class AccountComponent extends Component{
             borderWidth: '0px',
             margin: '10px',
             borderRadius: '0px',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            fontWeight: 'bold'
         };
 
         const registerBtnStyle = {
@@ -28,12 +29,13 @@ export default class AccountComponent extends Component{
             padding: '10px 50px 10px 50px',
             margin: '10px',
             borderRadius: '0px',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            fontWeight: 'bold'
         }
 
         return (
             <div style={accountSectionStyle} className='accountSection'>
-                <Button style={LoginBtnStyle} className='LoginBtn' type='submit' href='https://google.com'><BoxArrowInRight/> Login</Button>
+                <Button style={LoginBtnStyle} className='LoginBtn' type='submit'><BoxArrowInRight/> Login</Button>
                 <Button style={registerBtnStyle} className='registerBtn' type='submit' ><PersonPlusFill/> Register</Button>
             </div>
         )
