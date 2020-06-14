@@ -3,6 +3,10 @@ import Card from 'react-bootstrap/Card'
 import PopOut from './cardPopOut';
 
 export default class AttendCard extends Component {
+    constructor(props) {
+        super(props);
+        this.image = this.props.image;
+      }
     render() {
         const cardStyle = {
             borderWidth: '0px',
@@ -21,14 +25,14 @@ export default class AttendCard extends Component {
         return (
             <div style={{ listStyleType: 'none' , margin:'auto'}} className='cardHolder'>
                 <Card style={cardStyle}>
-                    <Card.Img style={imageStyle} variant="top" src="https://images.unsplash.com/photo-1592011159356-3a1f7c74e784?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+                    <Card.Img style={imageStyle} variant="top" src={this.props.image} />
                     <Card.Body style={{backgroundColor: '#ebf5ff'}}>
                         <Card.Title style={{ display: 'block', color: '#5496ff', float: 'left' }}>Speaker Name</Card.Title>
                         <Card.Text style={{ clear: 'both'}}>
                             Job Title, Department
                             Name, Company Name
                         </Card.Text>
-                        <PopOut/>
+                        <PopOut image={this.props.image}/>
                     </Card.Body>
                 </Card>
             </div>

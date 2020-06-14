@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { SocialIcon } from 'react-social-icons';
 
 export default class FooterLinks extends Component {
     render() {
@@ -31,6 +32,9 @@ export default class FooterLinks extends Component {
             textAlign: 'left',
             margin: 'auto',
             color: 'white'
+        }
+        const socialStyle = {
+            margin: '10px'
         }
         const hrStyle = {
             borderColor: 'white'
@@ -70,7 +74,10 @@ export default class FooterLinks extends Component {
                 <ul style={footerListStyle} className='footerList'>
                     <span style={headerStyle}> Social </span>
                     <hr style={hrStyle} />
-
+                    <SocialIcon style={socialStyle} url="http://facebook.com" />
+                    <SocialIcon style={socialStyle} url="http://twitter.com" />
+                    <SocialIcon style={socialStyle} url="http://linkedin.com" />
+                    <SocialIcon style={socialStyle} url="http://youtube.com" />
                 </ul>
                 <ul style={footerListStyle} className='footerList'>
                     <span style={headerStyle}> Find Us </span>
